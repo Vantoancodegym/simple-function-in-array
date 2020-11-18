@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<input id="nhapChuoi" type="text">
+<button type="button" onclick="changetext()">Change</button>
+<p id="result"></p>
+<script>
+    function changetext(){
+        let array =[];
+        let text = document.getElementById("nhapChuoi").value;
+        for (let x =0;x<text.length;x++) {
+            if (text[x] == text[x].toLowerCase()) {
+                array.push(text[x].toUpperCase());
+            } else if (text[x] == text[x].toUpperCase()) {
+                array.push(text[x].toLowerCase());
+            } else {
+                array.push(text[x]);
+            }
+        }
+        document.getElementById("result").innerText = array.join("");
+
+    }
+</script>
+</body>
+</html>

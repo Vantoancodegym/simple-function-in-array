@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<input type="number" id="nhapN">
+<input type="button" value="ket qua" onclick="dislayN()">
+<p id="result"></p>
+<script>
+    function dislayN(){
+    let a = document.getElementById("nhapN").value;
+    let array = a.split("");
+    let temp = [];
+    let str = "";
+    for (let i =0; i <array.length;i++){
+        str +=array[i];
+        if (str%2==0){
+            temp.push(str);
+            str=""
+        }
+
+    }
+    document.getElementById("result").innerText = temp.join("-");
+    }
+</script>
+</body>
+</html>
